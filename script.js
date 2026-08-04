@@ -1,6 +1,6 @@
-/* ============================
+/* 
    DOM references
-============================ */
+ */
 const rateCard = document.getElementById('rate-card');
 const rateTargetLabel = document.getElementById('rates-target-currency');
 
@@ -13,11 +13,11 @@ const currencyInput = document.getElementById('currency');
 const currencyError = document.getElementById('currency-error');
 const successBox = document.getElementById('form-success');
 
-/* ============================
+/* 
    Exchange rate: rendering
-============================ */
+ */
 function renderRate(data) {
-  const rateInfo = data[0]; // API returns an array
+  const rateInfo = data[0]; 
   const updated = new Date(rateInfo.time);
   const isoTime = updated.toISOString();
   const readableTime = updated.toLocaleString(undefined, {
@@ -47,9 +47,9 @@ function renderError() {
 // implementation above. allratestoday.com's authenticated endpoint is
 // server-side-only by design (confirmed in their docs) and cannot be
 // called directly from a browser due to CORS.
-/* ============================
+/* 
    Exchange rate: fetch + orchestration
-============================ */
+ */
 async function fetchRate(target) {
   // Real implementation — kept for reference / restoring later.
   // const res = await fetch(`https://allratestoday.com/api/v1/rates?source=USD&target=${target}`, {
@@ -99,9 +99,9 @@ function scrollToRateCard() {
   });
 }
 
-/* ============================
+/* 
    Form validation
-============================ */
+ */
 function validateName(value) {
   const trimmed = value.trim();
 
@@ -145,9 +145,9 @@ function applyValidation(input, errorEl, validateFn) {
   }
 }
 
-/* ============================
+/* 
    Success message
-============================ */
+ */
 function showSuccessMessage(rateLoaded) {
   successBox.textContent = rateLoaded
     ? "Thanks — we've got your details. We've updated the rate above for you."
@@ -156,9 +156,9 @@ function showSuccessMessage(rateLoaded) {
   successBox.focus();
 }
 
-/* ============================
+/* 
    Submit handler
-============================ */
+ */
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
