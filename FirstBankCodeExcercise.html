@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Exchange | First Bank</title>
+
+<meta name="description" content="Check today's USD currency rates and connect with a First Bank currency specialist for your international transfer.">
+<link rel="canonical" href="https://www.localfirstbank.com/currency-exchange">
+<link rel="icon" type="image/png" href="https://localfirstbank.com/app/themes/first_bank/images/favicons/site_favicon.ico?v=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+  <img src="fb_logo_primary.jpg" alt="First Bank" class="logo">
+</header>
+
+<main id="main-content">
+
+  <section aria-labelledby="hero-heading">
+    <div class="hero-heading">
+      <h1 id="hero-heading">Sending money abroad? Let's get you the right rate.</h1>
+      <p>Check today's rate, then tell us what you need — a currency specialist will follow up with the details.</p>
+      <a href="#lead-form" class="btn btn-primary">Get my rate below</a>
+      <p class="trust-strip">Equal Housing Lender | Member FDIC | Serving the Carolinas since 1935</p>
+    </div>
+  </section>
+
+<div class="rate-and-form">
+
+  <section aria-labelledby="rates-heading">
+    <h2 id="rates-heading">Today's exchange rate</h2>
+    <p id="rates-subhead">
+      Live USD currency rates, refreshed from our currency desk.
+    </p>
+
+    <div id="rate-card" aria-live="polite">
+      <p>Please submit the form to load today's rates</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="form-heading">
+    <h2 id="form-heading">Tell us what you need</h2>
+    <p>Enter your details and we'll follow up with your rate and next steps — no obligation.</p>
+
+    <form id="lead-form" novalidate>
+
+      <div class="form-row">
+        <label for="full-name">
+          Full name <span aria-hidden="true">*</span><span class="visually-hidden"> (required)</span>
+        </label>
+        <input type="text" id="full-name" name="fullName" autocomplete="name"
+               required aria-required="true" aria-describedby="full-name-error">
+        <p class="field-error" id="full-name-error" role="alert"></p>
+      </div>
+
+      <div class="form-row">
+        <label for="email">
+          Email address <span aria-hidden="true">*</span><span class="visually-hidden"> (required)</span>
+        </label>
+        <input type="email" id="email" name="email" autocomplete="email"
+               required aria-required="true" aria-describedby="email-error">
+        <p class="field-error" id="email-error" role="alert"></p>
+      </div>
+
+      <div class="form-row">
+        <label for="currency">
+          Currency you're interested in <span aria-hidden="true">*</span><span class="visually-hidden"> (required)</span>
+        </label>
+        <select id="currency" name="currency" required aria-required="true" aria-describedby="currency-error">
+          <option value="">Select a currency…</option>
+          <option value="EUR">EUR — Euro</option>
+          <option value="JPY">JPY — Japanese Yen</option>
+          <option value="GBP">GBP — British Pound</option>
+          <option value="AUD">AUD — Australian Dollar</option>
+          <option value="CAD">CAD — Canadian Dollar</option>
+        </select>
+        <p class="field-error" id="currency-error" role="alert"></p>
+      </div>
+
+      <button type="submit" class="submit-btn">Get my rate</button>
+
+    </form>
+
+    <div id="form-success" role="status" tabindex="-1"></div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <p>First Bank — investing in the Carolinas since 1935.</p>
+  <p>Equal Housing Lender | Member FDIC</p>
+</footer>
+
+</body>
+</html>
